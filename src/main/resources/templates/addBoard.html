@@ -1,0 +1,45 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:replace="fragments/bodyHeader::bodyHeader"/>
+
+    <div class="container" style="max-width:800px">
+        <div class="row"><p class="fs-3 fw-bolder">게시글 작성</p></div>
+
+        <form action="post">
+            <div class="row py-2">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">제목</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </div>
+            <div class="row py-1">
+                <div class="input-group">
+                    <span class="input-group-text">내용</span>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">파일첨부</label>
+                    <input class="form-control" type="file" id="formFile" multiple="multiple">
+                </div>
+            </div>
+            <div class="row">
+                <hr>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <button type="button" class="col btn btn-light">취소</button>
+                    <button type="submit" class="col btn btn-primary">저장</button>
+                </div>
+            </div>
+        </form>
+    </div>
+<div th:replace="fragments/footer::footer"/>
+</body>
+</html>

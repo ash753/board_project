@@ -1,0 +1,77 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:replace="fragments/bodyHeader::bodyHeader"/>
+
+<div class="container">
+    <div class="row py-2">
+        <div class="container d-flex" style="width:800px;">
+            <div class="container d-flex flex-wrap">
+                <ul class="nav me-auto">
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><button class="btn btn-secondary" type="submit">목록으로</button></a></li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><button class="btn btn-primary" type="submit">수정</button></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><button class="btn btn-danger" type="submit">삭제</button></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-2">
+        <div class="container d-flex" style="width:800px;">
+            <p class="fs-2 fw-bolder">제목</p>
+        </div>
+        <div class="row py-2">
+            <div class="container d-flex" style="width:800px;">
+                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores cupiditate, deserunt dolores est eum excepturi facilis illum ipsum itaque mollitia nobis pariatur porro, provident quaerat quam quibusdam saepe sint totam, ullam! Aliquid aut deleniti dicta dolorem eius esse exercitationem expedita fuga in iure iusto labore maxime odio omnis quia quis rem repellendus repudiandae sed tenetur, veritatis voluptas voluptates. Ab amet consectetur cupiditate distinctio, eaque, eos error et ex explicabo facere fuga harum libero minus modi molestias neque nesciunt nihil odit perferendis quidem ratione rem repellendus, repudiandae saepe sequi sit soluta temporibus unde veniam voluptatibus? Facilis inventore quaerat qui tenetur!/p>
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="container d-flex" style="width:800px;">
+                첨부 파일 :
+            </div>
+
+        </div>
+        <div class="row py-2">
+            <hr class="container d-flex" style="width:800px;"/>
+        </div>
+
+        <div class="row py-1">
+            <div class = "container" style="width:600px;">
+                <div class="card w-90">
+                    <div class="card-body">
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="container d-flex flex-wrap">
+                            <ul class="nav me-auto">
+                            </ul>
+                            <ul class="nav">
+                                <li class="nav-item mt-3">날짜</li>
+                                <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><button class="btn btn-secondary" type="submit">삭제</button></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-1">
+            <div class = "container" style="width:600px;">
+                <div class="card w-90">
+                    <div class="card-body">
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                        <a href="#" class="nav-link link-dark px-2"><button class="btn btn-primary float-right" type="submit">댓글 쓰기</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/footer::footer"/>
+</body>
+</html>
