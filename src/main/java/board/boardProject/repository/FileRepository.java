@@ -1,12 +1,10 @@
 package board.boardProject.repository;
 
-import board.boardProject.domain.dao.BoardDao;
 import board.boardProject.domain.dao.FileDao;
-import board.boardProject.repository.mapper.FileDaoMapper;
+import board.boardProject.mapper.FileDaoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.io.File;
 import java.util.List;
 
 @Repository

@@ -9,4 +9,13 @@ public class viewControll {
     public String board(){
         return "board";
     }
+
+    @GetMapping("addBoard")
+    public String addBoard(){
+        return "addBoard";
+    }
+    @GetMapping("editBoard")
+    public String editBoard(){
+        return "editBoard";
+    }
 }

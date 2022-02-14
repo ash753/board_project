@@ -1,8 +1,7 @@
 package board.boardProject.repository;
 
 import board.boardProject.domain.dao.BoardDao;
-import board.boardProject.repository.mapper.BoardDaoMapper;
-import lombok.RequiredArgsConstructor;
+import board.boardProject.mapper.BoardDaoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

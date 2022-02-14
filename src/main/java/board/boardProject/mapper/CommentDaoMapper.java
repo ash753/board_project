@@ -1,4 +1,4 @@
-package board.boardProject.repository.mapper;
+package board.boardProject.mapper;
 
 import board.boardProject.domain.dao.CommentDao;
 import org.apache.ibatis.annotations.*;

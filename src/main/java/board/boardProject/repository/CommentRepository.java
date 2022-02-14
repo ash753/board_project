@@ -1,7 +1,7 @@
 package board.boardProject.repository;
 
 import board.boardProject.domain.dao.CommentDao;
-import board.boardProject.repository.mapper.CommentDaoMapper;
+import board.boardProject.mapper.CommentDaoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
