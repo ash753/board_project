@@ -23,7 +23,7 @@ public class BoardServiceImp implements BoardService{
     private final BoardRepository boardRepository;
     private final FileRepository fileRepository;
     private final CommentRepository commentRepository;
-    private final FileStore fileStore;
+    private final FileService fileService;
 
     @Override
     @Transactional
@@ -46,9 +46,6 @@ public class BoardServiceImp implements BoardService{
         BoardDao boardDao = new BoardDao(boardAddDto.getTitle(), boardAddDto.getContent(), now);
         BoardDao savedBoardDao = boardRepository.save(boardDao);
 
-        List<FileSaveDto> fileSaveDtoList = fileStore.storeFiles(boardAddDto.getFileList());
-        for (FileSaveDto fileSaveDto : fileSaveDtoList) {
-            fileRepository.save(new FileDao(fileSaveDto.getOriginalName(), fileSaveDto.getSavedName(), savedBoardDao.getId()));
-        }
+        fileService.storeFiles(boardAddDto.getFileList(), savedBoardDao.getId());
     }
 }
