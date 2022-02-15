@@ -4,13 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 @Getter @Setter
 public class FileSaveDto {
-    private String originalName;
-    private String savedName;
+    private List<MultipartFile> fileList;
 
-    public FileSaveDto(String originalName, String savedName) {
-        this.originalName = originalName;
-        this.savedName = savedName;
+    public FileSaveDto(List<MultipartFile> fileList) {
+        this.fileList = fileList;
     }
 }

@@ -15,6 +15,11 @@ public class FileDao {
     public FileDao() {
     }
 
+    public FileDao(String originalName, String savedName) {
+        this.originalName = originalName;
+        this.savedName = savedName;
+    }
+
     public FileDao(String originalFile, String savedName, Integer boardId) {
         this.originalName = originalFile;
         this.savedName = savedName;

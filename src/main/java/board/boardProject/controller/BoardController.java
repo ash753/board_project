@@ -1,24 +1,33 @@
 package board.boardProject.controller;
 
-import board.boardProject.domain.dto.BoardAddDto;
+import board.boardProject.domain.dao.BoardDao;
+import board.boardProject.domain.dto.*;
 import board.boardProject.service.BoardService;
+import board.boardProject.service.CommentService;
+import board.boardProject.service.FileService;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @Slf4j
 @Controller
 @RequiredArgsConstructor
 public class BoardController {
     private final BoardService boardService;
+    private final CommentService commentService;
+    private final FileService fileService;
 
     @GetMapping("/boards")
     public String boardsList(Model model) {
@@ -26,15 +35,55 @@ public class BoardController {
         return "boardList";
     }
 
-    @GetMapping("/boards/new")
+    @GetMapping("/boards/{boardId}")
+    public String board(@PathVariable Integer boardId, Model model) {
+        BoardPrintDto boardPrintDto = boardService.getBoardInfo(boardId);
+        List<CommentPrintDto> commentPrintDtoList = commentService.getCommentListByBoardId(boardId);
+        List<FileDownloadDto> fileDownloadDtoList = fileService.getFileInfoByBoardId(boardId);
+
+        model.addAttribute("board", boardPrintDto);
+        model.addAttribute("comments", commentPrintDtoList);
+        model.addAttribute("files", fileDownloadDtoList);
+        model.addAttribute("commentAddDto", new CommentAddDto());
+
+        return "board";
+    }
+
+    @GetMapping("/boards/newForm")
     public String createBoardForm(@ModelAttribute("boardForm") BoardAddDto boardAddDto) {
         return "createBoardForm";
     }
 
-    @PostMapping("boards/new")
-    public String createBoard(@ModelAttribute BoardAddDto boardAddDto) throws IOException {
-        log.info("boardAddDto.fileList.size()={}",boardAddDto.getFileList().size());
-        boardService.addBoard(boardAddDto);
+    @PostMapping("/boards")
+    public String createBoard(@ModelAttribute("boardForm") BoardAddDto boardAddDto) throws IOException {
+        BoardDao boardDao = boardService.addBoard(boardAddDto);
+        FileSaveDto fileSaveDto = new FileSaveDto(boardAddDto.getFileList());
+        fileService.storeFiles(fileSaveDto, boardDao.getId());
+        return "redirect:/boards";
+    }
+
+    @GetMapping("/boards/{boardId}/editForm")
+    public String boardEditForm(@PathVariable("boardId") Integer boardId,Model model) {
+        BoardPrintDto boardPrintDto = boardService.getBoardInfo(boardId);
+        model.addAttribute("boardEditDto", new BoardEditDto(boardPrintDto.getTitle() ,boardPrintDto.getContent()));
+        return "editBoard";
+    }
+
+    @PutMapping("/boards/{boardId}")
+    public String editBoard(@PathVariable("boardId") Integer boardId,
+                            @ModelAttribute BoardEditDto boardEditDto) throws IOException {
+        log.info("hello");
+        FileSaveDto fileSaveDto = new FileSaveDto(boardEditDto.getFileList());
+        boardService.editBoard(boardEditDto, boardId);
+        fileService.changeFiles(fileSaveDto, boardId);
+        return "redirect:/boards/{boardId}";
+    }
+
+    @DeleteMapping("/boards/{boardId}")
+    public String boardDelete(@PathVariable("boardId") Integer boardId){
+        fileService.deleteFileByBoardId(boardId);
+        commentService.deleteCommentByBoardId(boardId);
+        boardService.deleteBoard(boardId);
         return "redirect:/boards";
     }
 }

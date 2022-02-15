@@ -10,7 +10,7 @@
         <div class="container" style="width:800px;">
             <div  class="row mt-3">
                 <div class="col"><p class="fs-3 fw-bolder">게시글 목록</p></div>
-                <div class="col"><a href="/boards/new" class="nav-link link-dark px-2"><button class="btn btn-primary" type="submit">글쓰기</button></a></div>
+                <div class="col"><a href="/boards/newForm" class="nav-link link-dark px-2"><button class="btn btn-primary" type="submit">글쓰기</button></a></div>
             </div>
             <div class="row">
                 <table class="table table-striped">
@@ -22,7 +22,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="board : ${boards}"  th:onclick="'location.href=\''+ @{${board.id}} + '\''">
+                    <tr th:each="board : ${boards}"  th:onclick="'location.href=\''+'/boards/'+ @{${board.id}} + '\''">
                         <td th:text="${board.id}"></td>
                         <td th:text="${board.title}"></td>
                         <td th:text="${board.date}"></td>

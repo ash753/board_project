@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public class CommentDto {
+public class CommentAddDto {
     private String content;
-    private String date;
-    private Integer boardId;
 }

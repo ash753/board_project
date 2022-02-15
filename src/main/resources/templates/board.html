@@ -11,12 +11,19 @@
     <div class="row py-2">
         <div class="container d-flex" style="width:800px;">
             <div class="container d-flex flex-wrap">
-                <ul class="nav me-auto">
-                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><button class="btn btn-secondary" type="submit">목록으로</button></a></li>
-                </ul>
+                <ul class="nav me-auto"><li class="nav-item"><a href="/boards" class="nav-link link-dark px-2"><button class="btn btn-secondary" type="submit">목록으로</button></a></li></ul>
                 <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><button class="btn btn-primary" type="submit">수정</button></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><button class="btn btn-danger" type="submit">삭제</button></a></li>
+                    <li class="nav-item px-2">
+                        <form th:action="|/boards/${board.id}/editForm|" th:method="get">
+                            <button class="btn btn-primary" type="submit" >수정</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form th:action="|/boards/${board.id}|" th:method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <button class="btn btn-danger" type="submit" >삭제</button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -24,18 +31,25 @@
 
     <div class="row py-2">
         <div class="container d-flex" style="width:800px;">
-            <p class="fs-2 fw-bolder">제목</p>
+            <p class="fs-2 fw-bolder" th:text="${board.title}">제목</p>
         </div>
         <div class="row py-2">
             <div class="container d-flex" style="width:800px;">
-                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores cupiditate, deserunt dolores est eum excepturi facilis illum ipsum itaque mollitia nobis pariatur porro, provident quaerat quam quibusdam saepe sint totam, ullam! Aliquid aut deleniti dicta dolorem eius esse exercitationem expedita fuga in iure iusto labore maxime odio omnis quia quis rem repellendus repudiandae sed tenetur, veritatis voluptas voluptates. Ab amet consectetur cupiditate distinctio, eaque, eos error et ex explicabo facere fuga harum libero minus modi molestias neque nesciunt nihil odit perferendis quidem ratione rem repellendus, repudiandae saepe sequi sit soluta temporibus unde veniam voluptatibus? Facilis inventore quaerat qui tenetur!/p>
+                <p class="fs-5" th:text="${board.content}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores cupiditate, deserunt dolores est eum excepturi facilis illum ipsum itaque mollitia nobis pariatur porro, provident quaerat quam quibusdam saepe sint totam, ullam! Aliquid aut deleniti dicta dolorem eius esse exercitationem expedita fuga in iure iusto labore maxime odio omnis quia quis rem repellendus repudiandae sed tenetur, veritatis voluptas voluptates. Ab amet consectetur cupiditate distinctio, eaque, eos error et ex explicabo facere fuga harum libero minus modi molestias neque nesciunt nihil odit perferendis quidem ratione rem repellendus, repudiandae saepe sequi sit soluta temporibus unde veniam voluptatibus? Facilis inventore quaerat qui tenetur!/p>
             </div>
         </div>
         <div class="row py-2">
             <div class="container d-flex" style="width:800px;">
-                첨부 파일 :
+                <p th:text="|날짜 : ${board.date}|"></p>
             </div>
-
+        </div>
+        <div class="row py-2">
+            <div class="container" style="width:800px;">
+                <p class="fs-5">첨부파일</p>
+                <ul th:each="file:${files}">
+                    <li><a th:href="|/files/${file.id}|" th:text="${file.originalName}" download=""/></li>
+                </ul>
+            </div>
         </div>
         <div class="row py-2">
             <hr class="container d-flex" style="width:800px;"/>
@@ -43,15 +57,20 @@
 
         <div class="row py-1">
             <div class = "container" style="width:600px;">
-                <div class="card w-90">
+                <div class="card w-90" th:each="comment:${comments}">
                     <div class="card-body">
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text" th:text="${comment.content}">With supporting text below as a natural lead-in to additional content.</p>
                         <div class="container d-flex flex-wrap">
                             <ul class="nav me-auto">
                             </ul>
                             <ul class="nav">
-                                <li class="nav-item mt-3">날짜</li>
-                                <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><button class="btn btn-secondary" type="submit">삭제</button></a></li>
+                                <li class="nav-item mt-3" th:text="${comment.date}">날짜</li>
+                                <li class="nav-item">
+                                    <form th:action="|/boards/${board.id}/comments/${comment.id}|" th:method="post">
+                                        <input type="hidden" name="_method" value="delete">
+                                        <button class="btn btn-secondary" type="submit">삭제</button>
+                                    </form>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -63,8 +82,10 @@
             <div class = "container" style="width:600px;">
                 <div class="card w-90">
                     <div class="card-body">
-                        <textarea class="form-control" aria-label="With textarea"></textarea>
-                        <a href="#" class="nav-link link-dark px-2"><button class="btn btn-primary float-right" type="submit">댓글 쓰기</button></a>
+                        <form th:action="|/boards/${board.id}/comments|" th:object="${commentAddDto}" th:method="post">
+                            <textarea class="form-control" th:field="*{content}" aria-label="With textarea"></textarea>
+                            <button class="btn btn-primary float-right" type="submit">댓글 쓰기</button>
+                        </form>
                     </div>
                 </div>
             </div>

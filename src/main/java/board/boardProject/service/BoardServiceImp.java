@@ -1,12 +1,8 @@
 package board.boardProject.service;
 
 import board.boardProject.domain.dao.BoardDao;
-import board.boardProject.domain.dao.FileDao;
 import board.boardProject.domain.dto.*;
-import board.boardProject.filestore.FileStore;
 import board.boardProject.repository.BoardRepository;
-import board.boardProject.repository.CommentRepository;
-import board.boardProject.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,9 +17,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BoardServiceImp implements BoardService{
     private final BoardRepository boardRepository;
-    private final FileRepository fileRepository;
-    private final CommentRepository commentRepository;
-    private final FileService fileService;
 
     @Override
     @Transactional
@@ -39,13 +32,35 @@ public class BoardServiceImp implements BoardService{
 
     @Override
     @Transactional
-    public void addBoard(BoardAddDto boardAddDto) throws IOException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String now = sdf.format(Calendar.getInstance().getTime());
-
+    public BoardDao addBoard(BoardAddDto boardAddDto) throws IOException {
+        String now = getCurrentTimeAsString();
         BoardDao boardDao = new BoardDao(boardAddDto.getTitle(), boardAddDto.getContent(), now);
         BoardDao savedBoardDao = boardRepository.save(boardDao);
+        return savedBoardDao;
+    }
 
-        fileService.storeFiles(boardAddDto.getFileList(), savedBoardDao.getId());
+    @Override
+    public BoardPrintDto getBoardInfo(Integer boardId) {
+        BoardDao findBoardDao = boardRepository.findById(boardId);
+        return new BoardPrintDto(findBoardDao.getId(), findBoardDao.getTitle(), findBoardDao.getContent(), findBoardDao.getDate());
+    }
+
+    @Override
+    public void editBoard(BoardEditDto boardEditDto, Integer boardId) {
+        String now = getCurrentTimeAsString();
+        BoardDao boardDao = new BoardDao(boardId, boardEditDto.getTitle(), boardEditDto.getContent(), now);
+        boardRepository.edit(boardDao);
+    }
+
+    @Override
+    public void deleteBoard(Integer boardId) {
+        boardRepository.delete(boardId);
+    }
+
+
+    private String getCurrentTimeAsString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String now = sdf.format(Calendar.getInstance().getTime());
+        return now;
     }
 }

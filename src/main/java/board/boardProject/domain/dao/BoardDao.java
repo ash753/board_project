@@ -17,7 +17,16 @@ public class BoardDao {
     public BoardDao() {
     }
 
+
+
     public BoardDao(String title, String content, String date) {
+        this.title = title;
+        this.content = content;
+        this.date = date;
+    }
+
+    public BoardDao(Integer id, String title, String content, String date) {
+        this.id = id;
         this.title = title;
         this.content = content;
         this.date = date;

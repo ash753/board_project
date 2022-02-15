@@ -7,12 +7,12 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @Getter @Setter
-public class BoardAddDto {
+public class BoardEditDto {
     private String title;
     private String content;
     private List<MultipartFile> fileList;
 
-    public BoardAddDto(String title, String content) {
+    public BoardEditDto(String title, String content) {
         this.title = title;
         this.content = content;
     }
