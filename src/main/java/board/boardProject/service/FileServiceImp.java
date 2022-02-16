@@ -26,7 +26,7 @@ public class FileServiceImp implements FileService{
     private final FileManagement fileManagement;
 
     @Override
-    public void storeFiles(FileSaveDto fileSaveDto, Integer boardId) throws IOException {
+    public List<FileDao> storeFiles(FileSaveDto fileSaveDto, Integer boardId) throws IOException {
         List<MultipartFile> fileList = fileSaveDto.getFileList();
         List<FileDao> fileDaoList = fileManagement.storeFiles(fileList);
 
@@ -34,6 +34,7 @@ public class FileServiceImp implements FileService{
             fileDao.setBoardId(boardId);
             fileRepository.save(fileDao);
         }
+        return fileDaoList;
     }
 
     @Override

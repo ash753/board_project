@@ -2,6 +2,7 @@ package board.boardProject.service;
 
 import board.boardProject.domain.dao.BoardDao;
 import board.boardProject.domain.dto.*;
+import board.boardProject.exception.NoSuchElementException;
 import board.boardProject.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -41,6 +42,9 @@ public class BoardServiceImp implements BoardService{
     @Override
     public BoardPrintDto getBoardInfo(Integer boardId) {
         BoardDao findBoardDao = boardRepository.findById(boardId);
+        if(findBoardDao==null){
+            throw new NoSuchElementException();
+        }
         return new BoardPrintDto(findBoardDao.getId(), findBoardDao.getTitle(), findBoardDao.getContent(), findBoardDao.getDate());
     }
 

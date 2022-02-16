@@ -12,6 +12,9 @@ public class BoardAddDto {
     private String content;
     private List<MultipartFile> fileList;
 
+    public BoardAddDto() {
+    }
+
     public BoardAddDto(String title, String content) {
         this.title = title;
         this.content = content;

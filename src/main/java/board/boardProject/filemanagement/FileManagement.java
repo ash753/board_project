@@ -1,6 +1,8 @@
 package board.boardProject.filemanagement;
 
 import board.boardProject.domain.dao.FileDao;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,8 +17,8 @@ import java.util.UUID;
 @Component
 @Transactional
 public class FileManagement {
-    @Value("${file.dir}")
-    private String fileDir;
+
+    private final String fileDir = "D:/Desktop/portfolio/boardProject/src/main/resources/static/file/";
 
     public String getFullPath(String filename){
         return fileDir+filename;
@@ -46,7 +48,7 @@ public class FileManagement {
 
     private String createStoreFileName(String originalFileName){
         String ext = extractExt(originalFileName);
-        String uuid = UUID.randomUUID() + "";
+        String uuid = UUID.randomUUID().toString();
         return uuid+"."+ext;
     }
 

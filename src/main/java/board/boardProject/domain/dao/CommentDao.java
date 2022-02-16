@@ -21,6 +21,13 @@ public class CommentDao {
         this.boardId = boardId;
     }
 
+    public CommentDao(Integer id, String content, String date, Integer boardId) {
+        this.id = id;
+        this.content = content;
+        this.date = date;
+        this.boardId = boardId;
+    }
+
     @Override
     public String toString() {
         return "CommentDao{" +

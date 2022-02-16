@@ -35,12 +35,12 @@ public class CommentServiceImp implements CommentService {
     }
 
     @Override
-    public void addComment(CommentAddDto commentSaveDto, Integer boardId) {
+    public CommentDao addComment(CommentAddDto commentAddDto, Integer boardId) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String now = sdf.format(Calendar.getInstance().getTime());
 
-        CommentDao commentDao = new CommentDao(commentSaveDto.getContent(), now, boardId);
-        commentRepository.save(commentDao);
+        CommentDao commentDao = new CommentDao(commentAddDto.getContent(), now, boardId);
+        return commentRepository.save(commentDao);
     }
 
     @Override

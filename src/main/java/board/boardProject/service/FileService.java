@@ -1,5 +1,6 @@
 package board.boardProject.service;
 
+import board.boardProject.domain.dao.FileDao;
 import board.boardProject.domain.dto.FileDownloadDto;
 import board.boardProject.domain.dto.FileSaveDto;
 import org.springframework.core.io.Resource;
@@ -9,7 +10,7 @@ import java.net.MalformedURLException;
 import java.util.List;
 
 public interface FileService {
-    void storeFiles(FileSaveDto fileSaveDto, Integer boardId) throws IOException;
+    List<FileDao> storeFiles(FileSaveDto fileSaveDto, Integer boardId) throws IOException;
     void changeFiles(FileSaveDto fileSaveDto, Integer boardId) throws IOException;
     List<FileDownloadDto> getFileInfoByBoardId(Integer boardId);
     Resource getFileById(Integer fileId) throws MalformedURLException;

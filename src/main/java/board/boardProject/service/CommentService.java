@@ -1,5 +1,6 @@
 package board.boardProject.service;
 
+import board.boardProject.domain.dao.CommentDao;
 import board.boardProject.domain.dto.CommentPrintDto;
 import board.boardProject.domain.dto.CommentAddDto;
 
@@ -11,7 +12,7 @@ public interface CommentService {
 
     void deleteCommentByBoardId(Integer boardId);
 
-    void addComment(CommentAddDto commentSaveDto, Integer boardId);
+    CommentDao addComment(CommentAddDto commentAddDto, Integer boardId);
 
     void deleteCommentByCommentId(Integer commentId);
 }
