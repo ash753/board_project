@@ -3,6 +3,7 @@ package board.boardProject.filemanagement;
 import board.boardProject.domain.dao.FileDao;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Component
+@Transactional
 public class FileManagement {
     @Value("${file.dir}")
     private String fileDir;
@@ -22,6 +24,8 @@ public class FileManagement {
 
     public List<FileDao> storeFiles(List<MultipartFile> multipartFileList) throws IOException {
         List<FileDao> resultList = new ArrayList<>();
+
+        if(multipartFileList==null) return null;
         for (MultipartFile multipartFile : multipartFileList) {
             if (!multipartFile.isEmpty()) {
                 FileDao fileDao = storeFile(multipartFile);

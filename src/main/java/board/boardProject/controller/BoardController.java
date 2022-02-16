@@ -5,19 +5,12 @@ import board.boardProject.domain.dto.*;
 import board.boardProject.service.BoardService;
 import board.boardProject.service.CommentService;
 import board.boardProject.service.FileService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Delete;
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -25,6 +18,7 @@ import java.util.List;
 @Controller
 @RequiredArgsConstructor
 public class BoardController {
+
     private final BoardService boardService;
     private final CommentService commentService;
     private final FileService fileService;
@@ -72,7 +66,6 @@ public class BoardController {
     @PutMapping("/boards/{boardId}")
     public String editBoard(@PathVariable("boardId") Integer boardId,
                             @ModelAttribute BoardEditDto boardEditDto) throws IOException {
-        log.info("hello");
         FileSaveDto fileSaveDto = new FileSaveDto(boardEditDto.getFileList());
         boardService.editBoard(boardEditDto, boardId);
         fileService.changeFiles(fileSaveDto, boardId);

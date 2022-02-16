@@ -2,9 +2,7 @@ package board.boardProject.domain.dao;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Getter @Setter
@@ -16,8 +14,6 @@ public class BoardDao {
 
     public BoardDao() {
     }
-
-
 
     public BoardDao(String title, String content, String date) {
         this.title = title;

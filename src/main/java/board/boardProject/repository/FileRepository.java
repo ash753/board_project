@@ -26,21 +26,11 @@ public class FileRepository {
         return fileDaoMapper.findByBoardId(boardId);
     }
 
-    public boolean delete(Integer fileDaoId){
-        int affectedNumber = fileDaoMapper.delete(fileDaoId);
-        if(affectedNumber>0)return true;
-        else return false;
+    public void delete(Integer fileDaoId){
+        fileDaoMapper.delete(fileDaoId);
     }
 
-    public boolean deleteByBoardId(Integer boardId){
-        int affectedNumber = fileDaoMapper.deleteByBoardId(boardId);
-        if(affectedNumber>0) return true;
-        else return false;
-    }
-
-    public boolean deleteAll(){
-        int affectedNumber = fileDaoMapper.deleteAll();
-        if(affectedNumber>0)return true;
-        else return false;
+    public void deleteByBoardId(Integer boardId){
+        fileDaoMapper.deleteByBoardId(boardId);
     }
 }

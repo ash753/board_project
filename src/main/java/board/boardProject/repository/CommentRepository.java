@@ -25,27 +25,15 @@ public class CommentRepository {
         return commentDaoMapper.findByBoardId(boardId);
     }
 
-    public boolean edit(CommentDao commentDao){
-        int affectedNumber = commentDaoMapper.edit(commentDao);
-        if(affectedNumber>0) return true;
-        else return false;
+    public void edit(CommentDao commentDao){
+        commentDaoMapper.edit(commentDao);
     }
 
-    public boolean deleteByCommentId(Integer commentId){
-        int affectedNumber = commentDaoMapper.deleteByCommentId(commentId);
-        if(affectedNumber>0) return true;
-        else return false;
+    public void deleteByCommentId(Integer commentId){
+        commentDaoMapper.deleteByCommentId(commentId);
     }
 
-    public boolean deleteByBoardId(Integer boardId){
-        int affectedNumber = commentDaoMapper.deleteByBoardId(boardId);
-        if(affectedNumber>0) return true;
-        else return false;
-    }
-
-    public boolean deleteAll(){
-        int affectedNumber = commentDaoMapper.deleteAll();
-        if(affectedNumber>0) return true;
-        else return false;
+    public void deleteByBoardId(Integer boardId){
+        commentDaoMapper.deleteByBoardId(boardId);
     }
 }

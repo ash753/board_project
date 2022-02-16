@@ -14,12 +14,12 @@ import java.util.Calendar;
 import java.util.List;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class BoardServiceImp implements BoardService{
     private final BoardRepository boardRepository;
 
     @Override
-    @Transactional
     public List<BoardListDto> getBoardList() {
         List<BoardListDto> boardListDtoList = new ArrayList<>();
 
@@ -31,7 +31,6 @@ public class BoardServiceImp implements BoardService{
     }
 
     @Override
-    @Transactional
     public BoardDao addBoard(BoardAddDto boardAddDto) throws IOException {
         String now = getCurrentTimeAsString();
         BoardDao boardDao = new BoardDao(boardAddDto.getTitle(), boardAddDto.getContent(), now);

@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 @RequiredArgsConstructor
 public class CommentController {
+
     private final CommentService commentService;
+
     @PostMapping("/boards/{boardId}/comments")
     public String addComments(@PathVariable Integer boardId, @ModelAttribute CommentAddDto commentSaveDto){
         commentService.addComment(commentSaveDto, boardId);

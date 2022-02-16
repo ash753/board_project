@@ -6,6 +6,7 @@ import board.boardProject.domain.dto.CommentAddDto;
 import board.boardProject.repository.CommentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -13,9 +14,11 @@ import java.util.Calendar;
 import java.util.List;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class CommentServiceImp implements CommentService {
     private final CommentRepository commentRepository;
+
     @Override
     public List<CommentPrintDto> getCommentListByBoardId(Integer boardId) {
         List<CommentPrintDto> result = new ArrayList<>();

@@ -26,19 +26,10 @@ public class BoardRepository {
         return boardDaoMapper.findById(boardId);
     }
 
-    public boolean edit(BoardDao boardDao){
-        int affectedNumber = boardDaoMapper.edit(boardDao);
-        if(affectedNumber==1)return true;
-        else return false;
+    public void edit(BoardDao boardDao){
+        boardDaoMapper.edit(boardDao);
     }
-    public boolean delete(Integer boardId){
-        int affectedNumber = boardDaoMapper.delete(boardId);
-        if(affectedNumber==1)return true;
-        else return false;
+    public void delete(Integer boardId){
+       boardDaoMapper.delete(boardId);
     }
-
-    public void deleteAll(){
-        boardDaoMapper.deleteAll();
-    }
-
 }
