@@ -83,7 +83,8 @@
                 <div class="card w-90">
                     <div class="card-body">
                         <form th:action="|/boards/${board.id}/comments|" th:object="${commentAddDto}" th:method="post">
-                            <textarea class="form-control" th:field="*{content}" aria-label="With textarea"></textarea>
+                            <textarea class="form-control" th:field="*{content}" th:errorclass="field-error" aria-label="With textarea"></textarea>
+                            <div class="field-error" th:errors="*{content}"></div>
                             <button class="btn btn-primary float-right" type="submit">댓글 쓰기</button>
                         </form>
                     </div>

@@ -14,13 +14,15 @@
             <div class="row py-2">
                 <div class="input-group mb-3">
                     <span class="input-group-text">제목</span>
-                    <input type="text" class="form-control" th:field="*{title}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" th:field="*{title}" th:errorclass="field-error" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <div class="field-error" th:errors="*{title}"></div>
                 </div>
             </div>
             <div class="row py-1">
                 <div class="input-group">
                     <span class="input-group-text">내용</span>
-                    <textarea class="form-control" th:field="*{content}" style="min-height:150px;" aria-label="With textarea"></textarea>
+                    <textarea class="form-control" th:field="*{content}" th:errorclass="field-error" style="min-height:150px;" aria-label="With textarea"></textarea>
+                    <div class="field-error" th:errors="*{content}"></div>
                 </div>
             </div>
             <div class="row">

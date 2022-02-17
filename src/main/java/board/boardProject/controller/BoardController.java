@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -31,6 +33,7 @@ public class BoardController {
 
     @GetMapping("/boards/{boardId}")
     public String board(@PathVariable Integer boardId, Model model) {
+
         BoardPrintDto boardPrintDto = boardService.getBoardInfo(boardId);
         List<CommentPrintDto> commentPrintDtoList = commentService.getCommentListByBoardId(boardId);
         List<FileDownloadDto> fileDownloadDtoList = fileService.getFileInfoByBoardId(boardId);
@@ -49,15 +52,21 @@ public class BoardController {
     }
 
     @PostMapping("/boards")
-    public String createBoard(@ModelAttribute("boardForm") BoardAddDto boardAddDto) throws IOException {
+    public String createBoard(@Validated @ModelAttribute("boardForm") BoardAddDto boardAddDto,
+                              BindingResult bindingResult) throws IOException {
+
+        if(bindingResult.hasErrors()){
+            return "createBoardForm";
+        }
+
         BoardDao boardDao = boardService.addBoard(boardAddDto);
         FileSaveDto fileSaveDto = new FileSaveDto(boardAddDto.getFileList());
         fileService.storeFiles(fileSaveDto, boardDao.getId());
-        return "redirect:/boards";
+        return "redirect:/boards/"+boardDao.getId();
     }
 
     @GetMapping("/boards/{boardId}/editForm")
-    public String boardEditForm(@PathVariable("boardId") Integer boardId,Model model) {
+    public String boardEditForm(@PathVariable("boardId") Integer boardId ,Model model) {
         BoardPrintDto boardPrintDto = boardService.getBoardInfo(boardId);
         model.addAttribute("boardEditDto", new BoardEditDto(boardPrintDto.getTitle() ,boardPrintDto.getContent()));
         return "editBoard";
@@ -65,7 +74,13 @@ public class BoardController {
 
     @PutMapping("/boards/{boardId}")
     public String editBoard(@PathVariable("boardId") Integer boardId,
-                            @ModelAttribute BoardEditDto boardEditDto) throws IOException {
+                            @Validated @ModelAttribute("boardEditDto") BoardEditDto boardEditDto,
+                            BindingResult bindingResult) throws IOException {
+
+        if(bindingResult.hasErrors()){
+            return "editBoard";
+        }
+
         FileSaveDto fileSaveDto = new FileSaveDto(boardEditDto.getFileList());
         boardService.editBoard(boardEditDto, boardId);
         fileService.changeFiles(fileSaveDto, boardId);
