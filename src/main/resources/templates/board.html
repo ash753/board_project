@@ -9,7 +9,7 @@
 
 <div class="container">
     <div class="row py-2">
-        <div class="container d-flex" style="width:800px;">
+        <div class="container d-flex" style="max-width:800px;">
             <div class="container d-flex flex-wrap">
                 <ul class="nav me-auto"><li class="nav-item"><a href="/boards" class="nav-link link-dark px-2"><button class="btn btn-secondary" type="submit">목록으로</button></a></li></ul>
                 <ul class="nav">
@@ -34,7 +34,7 @@
             <p class="fs-2 fw-bolder" th:text="${board.title}">제목</p>
         </div>
         <div class="row py-2">
-            <div class="container d-flex" style="width:800px;">
+            <div class="container d-flex" style="width:800px; min-height:100px;" >
                 <p class="fs-5" th:text="${board.content}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores cupiditate, deserunt dolores est eum excepturi facilis illum ipsum itaque mollitia nobis pariatur porro, provident quaerat quam quibusdam saepe sint totam, ullam! Aliquid aut deleniti dicta dolorem eius esse exercitationem expedita fuga in iure iusto labore maxime odio omnis quia quis rem repellendus repudiandae sed tenetur, veritatis voluptas voluptates. Ab amet consectetur cupiditate distinctio, eaque, eos error et ex explicabo facere fuga harum libero minus modi molestias neque nesciunt nihil odit perferendis quidem ratione rem repellendus, repudiandae saepe sequi sit soluta temporibus unde veniam voluptatibus? Facilis inventore quaerat qui tenetur!/p>
             </div>
         </div>
@@ -59,12 +59,12 @@
             <div class = "container" style="width:600px;">
                 <div class="card w-90" th:each="comment:${comments}">
                     <div class="card-body">
-                        <p class="card-text" th:text="${comment.content}">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text" th:text="${comment.content}" >With supporting text below as a natural lead-in to additional content.</p>
                         <div class="container d-flex flex-wrap">
                             <ul class="nav me-auto">
                             </ul>
                             <ul class="nav">
-                                <li class="nav-item mt-3" th:text="${comment.date}">날짜</li>
+                                <li class="nav-item mt-2" th:text="${comment.date}">날짜</li>
                                 <li class="nav-item">
                                     <form th:action="|/boards/${board.id}/comments/${comment.id}|" th:method="post">
                                         <input type="hidden" name="_method" value="delete">
