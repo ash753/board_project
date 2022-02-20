@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbafd399-9a5d-4ecf-bfc6-6497bcdadd24" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/file/78694b0e-d86b-49f9-8d3e-08b355acd0b5.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2517OYhw7Jp2O7JQSw15AIHOjhd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\portfolio\boardProject\src\test\resources" />
+      <recent name="D:\Desktop\portfolio\boardProject\src\test" />
+      <recent name="D:\Desktop\포트폴리오\boardProject\src\main\resources\templates" />
+      <recent name="D:\Desktop\포트폴리오\boardProject\src\main\resources\static" />
+      <recent name="D:\Desktop\포트폴리오\boardProject\src\main\java\board\boardProject" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="board.boardProject.filemanagement" />
+      <recent name="board.boardProject.service" />
+      <recent name="board.boardProject.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BoardProjectApplication">
+    <configuration name="BoardProjectApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="board.boardProject.BoardProjectApplication" />
+      <module name="boardProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="board.boardProject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="board.boardProject in boardProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="boardProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="board.boardProject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="board.boardProject" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="board.boardProject.filemanagement in boardProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="boardProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="board.boardProject.filemanagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="board.boardProject.filemanagement" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="board.boardProject.repository in boardProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="boardProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="board.boardProject.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="board.boardProject.repository" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="board.boardProject.service in boardProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="boardProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="board.boardProject.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="board.boardProject.service" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BoardProjectApplication" />
+        <item itemvalue="JUnit.board.boardProject.service in boardProject" />
+        <item itemvalue="JUnit.board.boardProject.repository in boardProject" />
+        <item itemvalue="JUnit.board.boardProject.filemanagement in boardProject" />
+        <item itemvalue="JUnit.board.boardProject in boardProject" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbafd399-9a5d-4ecf-bfc6-6497bcdadd24" name="Changes" comment="" />
+      <created>1644682712318</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644682712318</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/boardProject$FileServiceTest.ic" NAME="FileServiceTest Coverage Results" MODIFIED="1645036187430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$board_boardProject_in_boardProject.ic" NAME="board.boardProject in boardProject Coverage Results" MODIFIED="1645036701824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$BoardProjectApplicationTests.ic" NAME="BoardProjectApplicationTests Coverage Results" MODIFIED="1644765025494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$board_boardProject_repository_in_boardProject.ic" NAME="board.boardProject.repository in boardProject Coverage Results" MODIFIED="1645036749717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$BoardRepositoryTest_deleteTest.ic" NAME="BoardRepositoryTest.deleteTest Coverage Results" MODIFIED="1644764975491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$CommentRepositoryTest.ic" NAME="CommentRepositoryTest Coverage Results" MODIFIED="1644985743432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$BoardServiceImpTest.ic" NAME="BoardServiceImpTest Coverage Results" MODIFIED="1645005809069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$CommentServiceTest.ic" NAME="CommentServiceTest Coverage Results" MODIFIED="1645011588392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$FileRepositoryTest.ic" NAME="FileRepositoryTest Coverage Results" MODIFIED="1644985479160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$board_boardProject_service_in_boardProject.ic" NAME="board.boardProject.service in boardProject Coverage Results" MODIFIED="1645036762662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$BoardRepositoryTest.ic" NAME="BoardRepositoryTest Coverage Results" MODIFIED="1644984753849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$board_boardProject_filemanagement___and_2_more.ic" NAME="board.boardProject.filemanagement.* and 2 more Coverage Results" MODIFIED="1645036507439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/boardProject$FileManagementTest.ic" NAME="FileManagementTest Coverage Results" MODIFIED="1645036626575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.filemanagement.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$board_in_boardProject.ic" NAME="board in boardProject Coverage Results" MODIFIED="1645030179271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$board_boardProject_filemanagement_in_boardProject.ic" NAME="board.boardProject.filemanagement in boardProject Coverage Results" MODIFIED="1645036737393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>board.boardProject.filemanagement.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/boardProject$BoardRepositoryTest_and_2_more.ic" NAME="BoardRepositoryTest and 2 more Coverage Results" MODIFIED="1645036645325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
