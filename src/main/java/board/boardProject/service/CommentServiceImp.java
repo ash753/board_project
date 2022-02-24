@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.TimeZone;
 
 @Service
 @Transactional
@@ -37,6 +38,7 @@ public class CommentServiceImp implements CommentService {
     @Override
     public CommentDao addComment(CommentAddDto commentAddDto, Integer boardId) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        sdf.setTimeZone(TimeZone.getTimeZone("Asia/Seoul"));
         String now = sdf.format(Calendar.getInstance().getTime());
 
         CommentDao commentDao = new CommentDao(commentAddDto.getContent(), now, boardId);
