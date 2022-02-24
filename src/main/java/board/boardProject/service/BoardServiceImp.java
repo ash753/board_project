@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.TimeZone;
 
 @Service
 @Transactional
@@ -63,6 +64,7 @@ public class BoardServiceImp implements BoardService{
 
     private String getCurrentTimeAsString() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        sdf.setTimeZone(TimeZone.getTimeZone("Asia/Seoul"));
         String now = sdf.format(Calendar.getInstance().getTime());
         return now;
     }
