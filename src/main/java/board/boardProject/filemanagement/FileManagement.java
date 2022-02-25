@@ -18,9 +18,8 @@ import java.util.UUID;
 @Transactional
 public class FileManagement {
 
-//    private final String fileDir = "D:/Desktop/portfolio/boardProject/src/main/resources/static/file/";
-    private final String fileDir = "/app/src/main/resources/static/file/";
-
+    @Value("${file.dir}")
+    private String fileDir;
 
     public String getFullPath(String filename){
         return fileDir+filename;
