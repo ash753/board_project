@@ -230,7 +230,7 @@
     <SUITE FILE_PATH="coverage/boardProject$FileManagementTest.ic" NAME="FileManagementTest Coverage Results" MODIFIED="1645036626575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>board.boardProject.filemanagement.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/boardProject$board_boardProject_filemanagement___and_2_more.ic" NAME="board.boardProject.filemanagement.* and 2 more Coverage Results" MODIFIED="1645804422911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/boardProject$board_boardProject_filemanagement___and_2_more.ic" NAME="board.boardProject.filemanagement.* and 2 more Coverage Results" MODIFIED="1645894691046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/boardProject$board_in_boardProject.ic" NAME="board in boardProject Coverage Results" MODIFIED="1645030179271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>board.*</FILTER>
     </SUITE>

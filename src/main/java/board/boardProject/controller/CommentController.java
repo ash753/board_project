@@ -39,6 +39,9 @@ public class CommentController {
             model.addAttribute("board", boardPrintDto);
             model.addAttribute("comments", commentPrintDtoList);
             model.addAttribute("files", fileDownloadDtoList);
+
+            String nlString = System.getProperty("line.separator").toString();
+            model.addAttribute("nlString", nlString);
             return "board";
         }
         commentService.addComment(commentSaveDto, boardId);
