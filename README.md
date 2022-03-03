@@ -15,6 +15,7 @@ Spring 및 MyBatis를 활용한 BackEnd 설계능력 향상
 - MyBatis
 - MySQL
 - Thymeleaf
+- Bootstrap
 
 # 기능 설명
 
@@ -27,6 +28,32 @@ Spring 및 MyBatis를 활용한 BackEnd 설계능력 향상
 - 필수값에 대한 검증 적용- 제목, 본문, 댓글
 - 다중 파일 첨부 기능
 - Test Code Coverage 100% - Service, Respository
+
+
+# UI 페이지 기획
+
+- 게시글 목록
+
+![image](https://user-images.githubusercontent.com/67199475/156622031-030d6821-e71d-4dd2-8184-c24c7ea9d8bb.png)
+
+- 게시글 작성
+    - 입력 검증 - 제목, 내용은 필수값입니다.
+    - 파일 첨부 기능
+
+![image](https://user-images.githubusercontent.com/67199475/156622227-2013b1fb-8640-4d97-a298-92e11623f40f.png)
+
+
+- 게시글 수정
+    - 제목은 수정이 불가능합니다.
+
+![image](https://user-images.githubusercontent.com/67199475/156622282-17d731fb-fba7-453b-befb-cf1806282f4e.png)
+
+- 게시글 상세 페이지
+    - 첨부 파일 다운로드 기능
+    - 댓글 작성 기능 - 댓글 내용은 필수값 입니다.
+
+![image](https://user-images.githubusercontent.com/67199475/156622371-8a590b99-3bb4-4c2d-bd65-758bd5af43a6.png)
+
 
 # 패키지 구조
 ![image](https://user-images.githubusercontent.com/67199475/155755096-22b7f21b-48be-4c72-90a6-bfac9708f524.png)
