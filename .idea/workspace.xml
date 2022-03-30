@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cbafd399-9a5d-4ecf-bfc6-6497bcdadd24" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/boardProject/domain/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/boardProject/domain/dao/BoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/boardProject/domain/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/boardProject/domain/dao/CommentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/boardProject/domain/dao/FileDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/boardProject/domain/dao/FileDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/boardProject/filemanagement/FileManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/boardProject/filemanagement/FileManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/board/boardProject/service/FileServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/board/boardProject/service/FileServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/board/boardProject/filemanagement/FileManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/board/boardProject/filemanagement/FileManagementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/board/boardProject/repository/BoardRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/board/boardProject/repository/BoardRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/board/boardProject/repository/CommentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/board/boardProject/repository/CommentRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +98,7 @@
       <recent name="board.boardProject.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.board.boardProject in boardProject">
+  <component name="RunManager" selected="Application.BoardProjectApplication">
     <configuration name="BoardProjectApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="board.boardProject.BoardProjectApplication" />
       <module name="boardProject" />
@@ -104,17 +112,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardRepositoryTest.editTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="boardProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="board.boardProject.service.*" />
+          <option name="PATTERN" value="board.boardProject.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="board.boardProject.service" />
-      <option name="MAIN_CLASS_NAME" value="board.boardProject.service.FileServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="board.boardProject.repository" />
+      <option name="MAIN_CLASS_NAME" value="board.boardProject.repository.BoardRepositoryTest" />
+      <option name="METHOD_NAME" value="editTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,20 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="board.boardProject.filemanagement in boardProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="boardProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="board.boardProject.filemanagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="board.boardProject.filemanagement" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="board.boardProject.filemanagement.* and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="boardProject" />
       <option name="TEST_OBJECT" value="pattern" />
@@ -159,13 +154,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="board.boardProject.service in boardProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="boardProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="board.boardProject.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="board.boardProject.service" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BoardProjectApplication" />
-        <item itemvalue="JUnit.board.boardProject in boardProject" />
+        <item itemvalue="JUnit.board.boardProject.service in boardProject" />
         <item itemvalue="JUnit.board.boardProject.filemanagement.* and 2 more" />
-        <item itemvalue="JUnit.board.boardProject.filemanagement in boardProject" />
-        <item itemvalue="JUnit.FileServiceTest" />
+        <item itemvalue="JUnit.BoardRepositoryTest.editTest" />
+        <item itemvalue="JUnit.board.boardProject in boardProject" />
       </list>
     </recent_temporary>
   </component>
@@ -226,6 +235,7 @@
     <SUITE FILE_PATH="coverage/boardProject$board_boardProject_service_in_boardProject.ic" NAME="board.boardProject.service in boardProject Coverage Results" MODIFIED="1645036762662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>board.boardProject.service.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/board_project$board_boardProject_filemanagement___and_2_more.ic" NAME="board.boardProject.filemanagement.* and 2 more Coverage Results" MODIFIED="1648652450855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/boardProject$BoardRepositoryTest.ic" NAME="BoardRepositoryTest Coverage Results" MODIFIED="1644984753849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>board.boardProject.repository.*</FILTER>
     </SUITE>

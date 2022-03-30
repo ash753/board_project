@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import java.util.Objects;
 
-@Getter @Setter
+@Getter
 public class FileDao {
     private Integer id;
     private String originalName;
@@ -15,25 +15,11 @@ public class FileDao {
     public FileDao() {
     }
 
-    public FileDao(String originalName, String savedName) {
-        this.originalName = originalName;
-        this.savedName = savedName;
-    }
 
     public FileDao(String originalFile, String savedName, Integer boardId) {
         this.originalName = originalFile;
         this.savedName = savedName;
         this.boardId = boardId;
-    }
-
-    @Override
-    public String toString() {
-        return "FileDao{" +
-                "id=" + id +
-                ", originalName='" + originalName + '\'' +
-                ", savedName='" + savedName + '\'' +
-                ", boardId=" + boardId +
-                '}';
     }
 
     @Override

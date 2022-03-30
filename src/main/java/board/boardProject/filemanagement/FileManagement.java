@@ -25,26 +25,26 @@ public class FileManagement {
         return fileDir+filename;
     }
 
-    public List<FileDao> storeFiles(List<MultipartFile> multipartFileList) throws IOException {
+    public List<FileDao> storeFiles(Integer boardId, List<MultipartFile> multipartFileList) throws IOException {
         List<FileDao> resultList = new ArrayList<>();
 
         if(multipartFileList==null) return null;
         for (MultipartFile multipartFile : multipartFileList) {
             if (!multipartFile.isEmpty()) {
-                FileDao fileDao = storeFile(multipartFile);
+                FileDao fileDao = storeFile(boardId, multipartFile);
                 resultList.add(fileDao);
             }
         }
         return resultList;
     }
 
-    public FileDao storeFile(MultipartFile multipartFile) throws IOException {
+    public FileDao storeFile(Integer boardId, MultipartFile multipartFile) throws IOException {
         if(multipartFile.isEmpty()) return null;
 
         String originalFilename = multipartFile.getOriginalFilename();
         String storeFileName = createStoreFileName(originalFilename);
         multipartFile.transferTo(new File(getFullPath(storeFileName)));
-        return new FileDao(originalFilename, storeFileName);
+        return new FileDao(originalFilename, storeFileName,boardId);
     }
 
     private String createStoreFileName(String originalFileName){

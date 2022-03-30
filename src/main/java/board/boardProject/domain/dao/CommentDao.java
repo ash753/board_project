@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import java.util.Objects;
 
-@Getter @Setter
+@Getter
 public class CommentDao {
     private Integer id;
     private String content;
@@ -26,16 +26,6 @@ public class CommentDao {
         this.content = content;
         this.date = date;
         this.boardId = boardId;
-    }
-
-    @Override
-    public String toString() {
-        return "CommentDao{" +
-                "id=" + id +
-                ", content='" + content + '\'' +
-                ", date='" + date + '\'' +
-                ", boardId=" + boardId +
-                '}';
     }
 
     @Override

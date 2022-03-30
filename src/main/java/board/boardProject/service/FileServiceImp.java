@@ -28,10 +28,9 @@ public class FileServiceImp implements FileService{
     @Override
     public List<FileDao> storeFiles(FileSaveDto fileSaveDto, Integer boardId) throws IOException {
         List<MultipartFile> fileList = fileSaveDto.getFileList();
-        List<FileDao> fileDaoList = fileManagement.storeFiles(fileList);
+        List<FileDao> fileDaoList = fileManagement.storeFiles(boardId, fileList);
 
         for (FileDao fileDao : fileDaoList) {
-            fileDao.setBoardId(boardId);
             fileRepository.save(fileDao);
         }
         return fileDaoList;

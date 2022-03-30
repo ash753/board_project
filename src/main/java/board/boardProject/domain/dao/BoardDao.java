@@ -5,7 +5,7 @@ import lombok.Setter;
 
 import java.util.Objects;
 
-@Getter @Setter
+@Getter
 public class BoardDao {
     private Integer id;
     private String title;

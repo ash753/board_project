@@ -64,13 +64,15 @@ class CommentRepositoryTest {
 
          //when
          now = getCurrentTimeAsString();
-         comment1.setContent("수정된 댓글입니다.");
-         comment1.setDate(now);
-         commentRepository.edit(comment1);
+
+        CommentDao editComment = new CommentDao(comment1.getId(), "수정된 댓글입니다.",
+                comment1.getDate(), comment1.getBoardId());
+
+         commentRepository.edit(editComment);
          CommentDao findComment = commentRepository.findByCommentId(comment1.getId());
 
          //then
-         assertThat(findComment).isEqualTo(comment1);
+         assertThat(findComment.getContent()).isEqualTo(editComment.getContent());
      }
 
      @Test

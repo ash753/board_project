@@ -47,15 +47,17 @@ class BoardRepositoryTest {
         //given
         String now = getCurrentTimeAsString();
         BoardDao board1 = new BoardDao("스프링1", "안녕하세요", now);
-        BoardDao board2 = new BoardDao("스프링2", "안녕하세요", now);
 
         //when
-        BoardDao saveBoard1 = boardRepository.save(board1);
-        saveBoard1.setContent("바뀐 본문");
-        boardRepository.edit(saveBoard1);
+        BoardDao saveBoard = boardRepository.save(board1);
+
+        BoardDao board2 = new BoardDao(board1.getId(), board1.getTitle(),
+                "바뀐 본문", board1.getDate());
+
+        boardRepository.edit(board2);
 
         //then
-        assertThat(boardRepository.findById(saveBoard1.getId())).isEqualTo(saveBoard1);
+        assertThat(boardRepository.findById(board1.getId()).getContent()).isEqualTo(board2.getContent());
     }
     @Test
     public void deleteTest() throws Exception{
