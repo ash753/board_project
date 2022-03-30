@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cbafd399-9a5d-4ecf-bfc6-6497bcdadd24" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -33,16 +35,16 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/controller/FileController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/repository/BoardRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/service/CommentServiceImp.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/controller/BoardController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/controller/CommentController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/repository/CommentRepository.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/service/FileServiceImp.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/repository/FileRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/filemanagement/FileManagement.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/service/CommentServiceImp.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/filemanagement/FileManagement.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/repository/FileRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/repository/CommentRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/repository/BoardRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/controller/FileController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/board/boardProject/controller/CommentController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tmp/board_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -88,7 +90,7 @@
       <recent name="board.boardProject.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BoardProjectApplication">
+  <component name="RunManager" selected="JUnit.board.boardProject in boardProject">
     <configuration name="BoardProjectApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="board.boardProject.BoardProjectApplication" />
       <module name="boardProject" />
@@ -113,6 +115,20 @@
       <option name="PACKAGE_NAME" value="board.boardProject.service" />
       <option name="MAIN_CLASS_NAME" value="board.boardProject.service.FileServiceTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="board.boardProject in boardProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="boardProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="board.boardProject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="board.boardProject" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,27 +159,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="board.boardProject.service in boardProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="boardProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="board.boardProject.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="board.boardProject.service" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BoardProjectApplication" />
+        <item itemvalue="JUnit.board.boardProject in boardProject" />
         <item itemvalue="JUnit.board.boardProject.filemanagement.* and 2 more" />
         <item itemvalue="JUnit.board.boardProject.filemanagement in boardProject" />
         <item itemvalue="JUnit.FileServiceTest" />
-        <item itemvalue="JUnit.board.boardProject.service in boardProject" />
       </list>
     </recent_temporary>
   </component>

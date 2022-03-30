@@ -12,7 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 import java.util.List;
@@ -42,7 +41,9 @@ public class BoardController {
         model.addAttribute("board", boardPrintDto);
         model.addAttribute("comments", commentPrintDtoList);
         model.addAttribute("files", fileDownloadDtoList);
-        model.addAttribute("commentAddDto", new CommentAddDto());
+        if(!model.containsAttribute("commentAddDto")) {
+            model.addAttribute("commentAddDto", new CommentAddDto());
+        }
 
         String nlString = System.getProperty("line.separator").toString();
         model.addAttribute("nlString", nlString);
