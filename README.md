@@ -85,7 +85,7 @@ Spring 및 MyBatis를 활용한 BackEnd 설계능력 향상
 
 ## Controller, Service, Respository 관계도
 
-![image](https://user-images.githubusercontent.com/67199475/155755891-719a6d4a-ad4d-4469-b268-a5b7e438ae34.png)
+![image](https://user-images.githubusercontent.com/67199475/160870300-de949243-86bb-459f-afeb-14f7b12a74af.png)
 
 
 ## DB Schema
